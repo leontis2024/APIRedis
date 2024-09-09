@@ -14,7 +14,7 @@ A *API REST* desenvolvida com *Spring Boot* permite a comunicação entre a inte
 2. **Gerenciamento de medidas:**
    - Incrementação e busca de variavel que informar número de visualizações de uma obra
    - Incrementação e busca de variavel que informar número de comentários de uma obra
-   -    - Incrementação e busca de variavel que informar número de notas de uma obra
+   - Incrementação e busca de variavel que informar número de notas de uma obra
 
 ## Tecnologias Utilizadas
 - *Spring Boot*: Framework principal para o desenvolvimento da API.
@@ -23,7 +23,7 @@ A *API REST* desenvolvida com *Spring Boot* permite a comunicação entre a inte
 
 ### Passos do projeto:
  - [x] Criação da API para gerenciamento de usuários
- - []  Criação da API para gerenciamento de medidas.
+ - [X]  Criação da API para gerenciamento de medidas.
 
 ### Links 
 http://localhost:8080/swagger-ui/index.html
