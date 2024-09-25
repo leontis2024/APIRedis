@@ -1,11 +1,11 @@
 # Leontis
 Leontis é um aplicativo em desenvolvimento que será apresentado na Expo Tech 2024. O app permite escanear obras em museus, acessar guias digitais de museus, acompanhar notícias sobre o mundo da arte, entre outros recursos.
 
-## API do Leontis - Desenvolvimento II
+## API do Leontis - Redis
 
 ### Descrição
 Esse repositório guarda a API REDIS do aplicativo Leontis. 
-A *API REST* desenvolvida com *Spring Boot* permite a comunicação entre a interface e o banco de dados **REDIS** além de autenticação de acesso para segurança.
+A *API REST* desenvolvida com *Spring Boot* permite a comunicação entre a interface e o banco de dados **REDIS**.
 
 
 ### Funcionalidades
