@@ -26,7 +26,7 @@ A *API REST* desenvolvida com *Spring Boot* permite a comunicação entre a inte
  - [X]  Criação da API para gerenciamento de medidas.
 
 ### Links 
-http://localhost:8080/swagger-ui/index.html
+https://apiredis.onrender.com/swagger-ui/index.html
 
 ### Principais endpoints
 - */api/usuario*: Gerenciamento de usuários.
