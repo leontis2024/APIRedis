@@ -25,9 +25,9 @@ public class UsuarioController {
             @ApiResponse(responseCode = "200", description = "Atividade do usuário incrementada com sucesso"),
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor")
     })
-    public ResponseEntity<String> incrementUserActivity() {
+    public ResponseEntity<String> incrementarAtividade() {
         try {
-            usuarioService.incrementUserActivity();
+            usuarioService.incrementaUserActivity();
             return ResponseEntity.ok("Atividade do usuário incrementada com sucesso.");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao incrementar atividade do usuário.");
@@ -40,9 +40,9 @@ public class UsuarioController {
             @ApiResponse(responseCode = "200", description = "Atividade do usuário decrementada com sucesso"),
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor")
     })
-    public ResponseEntity<String> decrementUserActivity() {
+    public ResponseEntity<String> decrementarAtividade() {
         try {
-            usuarioService.decrementUserActivity();
+            usuarioService.decrementaUserActivity();
             return ResponseEntity.ok("Atividade do usuário decrementada com sucesso.");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao decrementar atividade do usuário.");
@@ -55,13 +55,15 @@ public class UsuarioController {
             @ApiResponse(responseCode = "200", description = "Contagem de atividade obtida com sucesso"),
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor")
     })
-    public ResponseEntity<?> getUserActivity() {
+    public ResponseEntity<?> obterAtividade() {
         try {
-            Integer count = usuarioService.getUserActivity();
+            Integer count = usuarioService.buscartUserActivity();
             return ResponseEntity.ok(count);
         } catch (Exception e) {
 
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao buscar contagem de atividade do usuário.");
         }
     }
+
+
 }
