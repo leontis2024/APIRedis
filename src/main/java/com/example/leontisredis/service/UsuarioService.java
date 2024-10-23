@@ -16,16 +16,16 @@ public class UsuarioService {
     }
 
     // Incrementar a atividade do usuário
-    public void incrementUserActivity() {
+    public void incrementaUserActivity() {
         redisTemplate.opsForValue().increment("atividade");
     }
 
     // Decrementar a atividade do usuário
-    public void decrementUserActivity() {
+    public void decrementaUserActivity() {
         redisTemplate.opsForValue().decrement("atividade");
     }
 
-    public Integer getUserActivity() {
+    public Integer buscartUserActivity() {
         try {
             String countStr = (String) redisTemplate.opsForValue().get("atividade");
             Integer count = countStr != null ? Integer.valueOf(countStr) : 0;

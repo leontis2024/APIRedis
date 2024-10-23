@@ -46,4 +46,15 @@ public class EstatisticaService {
         Integer count = countStr != null ? Integer.valueOf(countStr) : 0;
         return count;
     }
+
+    // Incrementar contadores de comentários
+    public void decrementarComentario(String obraId) {
+        redisTemplate.opsForValue().decrement("obra:comment:" + obraId);
+    }
+
+    // Incrementar contadores de avaliações
+    public void decrementarNota(String obraId) {
+        redisTemplate.opsForValue().decrement("obra:rating:" + obraId);
+    }
+
 }
