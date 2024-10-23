@@ -108,7 +108,7 @@ public class EstatisticaController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao buscar contagem de avaliações.");
         }
     }
-    @PostMapping("/comentario/decrementar")
+    @PostMapping("/comentario/decrementar/{obraId}")
     @Operation(summary = "Decrementar comentário da obra", description = "Decrementa o comentário de uma obra.")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Comentário da obra decrementado com sucesso"),
@@ -122,7 +122,7 @@ public class EstatisticaController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao decrementar comentário da obra.");
         }
     }
-    @PostMapping("/nota/decrementar")
+    @PostMapping("/nota/decrementar/{obraId}")
     @Operation(summary = "Decrementar nota da obra", description = "Decrementa a nota de uma obra.")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Nota da obra decrementado com sucesso"),
