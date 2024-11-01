@@ -22,7 +22,12 @@ public class UsuarioService {
 
     // Decrementar a atividade do usuário
     public void decrementaUserActivity() {
-        redisTemplate.opsForValue().decrement("atividade");
+        Long valor = Long.parseLong(redisTemplate.opsForValue().get("atividade").toString()) ;
+        if (valor-1 > 0){
+            redisTemplate.opsForValue().decrement("atividade");
+        }else {
+            throw new NullPointerException();
+        }
     }
 
     public Integer buscartUserActivity() {
