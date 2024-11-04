@@ -50,7 +50,7 @@ public class EstatisticaService {
     // Incrementar contadores de comentários
     public void decrementarComentario(String obraId) {
         Long valor = Long.parseLong(redisTemplate.opsForValue().get("obra:comment"+obraId).toString()) ;
-        if (valor-1 > 0){
+        if (valor-1 >= 0){
             redisTemplate.opsForValue().decrement("obra:comment:" + obraId);
         }else {
             throw new NullPointerException();
@@ -61,7 +61,7 @@ public class EstatisticaService {
     // Incrementar contadores de avaliações
     public void decrementarNota(String obraId) {
         Long valor = Long.parseLong(redisTemplate.opsForValue().get("obra:rating"+obraId).toString()) ;
-        if (valor-1 > 0 ){
+        if (valor-1 >= 0 ){
             redisTemplate.opsForValue().decrement("obra:rating:" + obraId);
         }else {
             throw new NullPointerException();
