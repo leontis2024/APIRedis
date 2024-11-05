@@ -1,10 +1,15 @@
 package com.example.leontisredis.service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+
+import static java.lang.Math.log;
 
 @Service
 public class EstatisticaService {
 
+    private static final Logger log = LoggerFactory.getLogger(EstatisticaService.class);
     private final RedisTemplate<String, Object> redisTemplate;
 
     public EstatisticaService(RedisTemplate<String, Object> redisTemplate) {
@@ -49,8 +54,8 @@ public class EstatisticaService {
 
     // Incrementar contadores de comentários
     public void decrementarComentario(String obraId) {
-        Long valor = Long.parseLong(redisTemplate.opsForValue().get("obra:comment"+obraId).toString()) ;
-        if (valor-1 >= 0){
+        Long valor = Long.parseLong(redisTemplate.opsForValue().get("obra:comment:"+obraId).toString()) ;
+        if (valor > 0){
             redisTemplate.opsForValue().decrement("obra:comment:" + obraId);
         }else {
             throw new NullPointerException();
@@ -60,10 +65,12 @@ public class EstatisticaService {
 
     // Incrementar contadores de avaliações
     public void decrementarNota(String obraId) {
-        Long valor = Long.parseLong(redisTemplate.opsForValue().get("obra:rating"+obraId).toString()) ;
-        if (valor-1 >= 0 ){
+        Long valor = Long.parseLong(redisTemplate.opsForValue().get("obra:rating:"+obraId).toString()) ;
+        if (valor > 0 ){
+
             redisTemplate.opsForValue().decrement("obra:rating:" + obraId);
         }else {
+
             throw new NullPointerException();
         }
     }
