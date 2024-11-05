@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d45ee6d8-deaf-4f12-a4d8-d497eb871b28" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/leontisredis/controller/EstatisticaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/leontisredis/controller/EstatisticaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/leontisredis/service/EstatisticaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/leontisredis/service/EstatisticaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/leontisredis/config/RedisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +46,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.LeontisRedisApplication.executor": "Debug",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/anaromera-ieg/OneDrive - Instituto Germinare/2/Leontis/LeontisRedis",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.LeontisRedisApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anaromera-ieg/OneDrive - Instituto Germinare/2/Leontis/LeontisRedis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.leontisredis.model" />
@@ -72,10 +76,11 @@
   <component name="RunManager">
     <configuration name="LeontisRedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
-        <env name="REDIS_HOST" value="virginia-redis.render.com" />
+        <env name="REDIS_HOST" value="oregon-redis.render.com" />
+        <env name="REDIS_PASSWORD" value="ui0Has39JKj3DJ0tCwW8zAKRSaF49Yg8" />
         <env name="REDIS_PORT" value="6379" />
-        <env name="REDIS_USER" value="red-crd1r952ng1s73fn3bkg" />
-        <env name="REDIS_PASSWORD" value="HguMRuovrT443OD9Tb3lkQAasW90EKX" />
+        <env name="REDIS_URL" value="rediss://red-crfk79jgbbvc73c600u0:ui0Has39JKj3DJOtCwW8zAKRSaF49Yg8@oregon-redis.render.com:6379" />
+        <env name="REDIS_USER" value="red-crfk79jgbbvc73c600u0" />
       </envs>
       <module name="LeontisRedis" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.leontisredis.LeontisRedisApplication" />
@@ -124,22 +129,15 @@
       <workItem from="1730460406517" duration="2176000" />
       <workItem from="1730719394710" duration="173000" />
       <workItem from="1730723735990" duration="2880000" />
-      <workItem from="1730805792916" duration="964000" />
+      <workItem from="1730805792916" duration="3480000" />
+      <workItem from="1730811683521" duration="323000" />
+      <workItem from="1730813760840" duration="794000" />
+      <workItem from="1730814586820" duration="974000" />
+      <workItem from="1730816372685" duration="1694000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/leontisredis/service/EstatisticaService.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
