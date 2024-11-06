@@ -8,6 +8,7 @@ Esse repositório guarda a API REDIS do aplicativo Leontis.
 A *API REST* desenvolvida com *Spring Boot* permite a comunicação entre a interface e o banco de dados **REDIS**.
 
 
+
 ### Funcionalidades
 1. **Gerenciamento de usuários:**
    - Operações de incrementação, decrementação e busca de variavel que informar número de usuários ativos no app.
